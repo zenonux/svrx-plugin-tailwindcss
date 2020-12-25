@@ -1,0 +1,46 @@
+{
+  "name": "svrx-plugin-tailwindcss",
+  "version": "0.0.1",
+  "description": "The svrx plugin for tailwindcss",
+  "main": "index.js",
+  "keywords": [
+    "svrx",
+    "svrx-plugin",
+    "tailwindcss"
+  ],
+  "engines": {
+    "svrx": ""
+  },
+  "author": "换个头像心好累",
+  "scripts": {
+    "start": "node ./example/start.js",
+    "test": "mocha",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "prepublishOnly": "npm run lint && npm run test"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "chokidar": "^3.4.3",
+    "debounce": "^1.2.0",
+    "tailwindcss": "^2.0.2",
+    "write": "^2.0.0"
+  },
+  "devDependencies": {
+    "@svrx/eslint-config": "^1.0.0",
+    "@svrx/util": "^1.1.4",
+    "eslint": "^6.2.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
+    "mocha": "^6.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
+  "license": "MIT"
+}
