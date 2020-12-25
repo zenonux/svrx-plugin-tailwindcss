@@ -7,7 +7,7 @@ const { exec } = require('./libs');
 
 async function build(srcFullPath, destFullPath, configFullPath, logger) {
   try {
-    await exec(`npx tailwindcss build ${srcFullPath} -o ${destFullPath} -c ${configFullPath}`, {
+    await exec(`node_modules/tailwindcss/lib/cli.js build ${srcFullPath} -o ${destFullPath} -c ${configFullPath}`, {
       cwd: __dirname,
     });
     logger.log('tailwindcss build success');
