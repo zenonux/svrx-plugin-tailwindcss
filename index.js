@@ -50,7 +50,7 @@ module.exports = {
       if (typeof (isBuild) !== 'undefined') {
         await build(srcFullPath, destFullPath, configFullPath, logger);
       }
-      await watch(srcFullPath, destFullPath, configFullPath, logger);
+      watch(srcFullPath, destFullPath, configFullPath, logger);
     },
   },
 };
